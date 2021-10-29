@@ -4,7 +4,7 @@ import (
 	"go/ast"
 	"reflect"
 
-	"github.com/adyzng/toolkit/utils"
+	"github.com/adyzng/gotool/utils"
 )
 
 type TypeKind int

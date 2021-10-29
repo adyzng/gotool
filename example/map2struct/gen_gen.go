@@ -3,7 +3,7 @@
 package map2struct
 
 import (
-	"github.com/adyzng/toolkit/example/model"
+	"github.com/adyzng/gotool/example/model"
 	"github.com/spf13/cast"
 )
 

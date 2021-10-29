@@ -3,7 +3,7 @@ package map2struct
 import (
 	"context"
 
-	"github.com/adyzng/toolkit/example/model"
+	"github.com/adyzng/gotool/example/model"
 )
 
 //go:generate map2struct

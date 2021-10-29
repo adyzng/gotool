@@ -15,9 +15,9 @@ import (
 
 	"golang.org/x/tools/imports"
 
-	"github.com/adyzng/toolkit/parse"
-	"github.com/adyzng/toolkit/tpl"
-	"github.com/adyzng/toolkit/utils"
+	"github.com/adyzng/gotool/parse"
+	"github.com/adyzng/gotool/tpl"
+	"github.com/adyzng/gotool/utils"
 )
 
 var (
@@ -29,7 +29,7 @@ func Usage() {
 	fmt.Fprintf(os.Stderr, "Usage of map2struct:\n")
 	fmt.Fprintf(os.Stderr, "    map2struct [flags] -input=xx -output=xx\n")
 	fmt.Fprintf(os.Stderr, "For more information, see:\n")
-	fmt.Fprintf(os.Stderr, "    https://github.com/adyzng/toolkit/blob/master/cmd/map2struct/README.md\n")
+	fmt.Fprintf(os.Stderr, "    https://github.com/adyzng/gotool/blob/master/cmd/map2struct/README.md\n")
 	fmt.Fprintf(os.Stderr, "Flags:\n")
 	flag.PrintDefaults()
 }

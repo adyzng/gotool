@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/adyzng/toolkit/utils"
+	"github.com/adyzng/gotool/utils"
 )
 
 var (

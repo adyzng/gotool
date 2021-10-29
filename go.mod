@@ -1,4 +1,4 @@
-module github.com/adyzng/toolkit
+module github.com/adyzng/gotool
 
 go 1.16
 

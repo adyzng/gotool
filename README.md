@@ -7,8 +7,8 @@
 ### 1. 下载 map2struct
 
 ``` bash
-go get github.com/adyzng/toolkit/cmd/map2struct
-go install github.com/adyzng/toolkit/cmd/map2struct
+go get github.com/adyzng/gotool/cmd/map2struct@latest
+go install github.com/adyzng/gotool/cmd/map2struct@latest
 ```
 
 ### 2. 在工程目录下配置 go:generate
