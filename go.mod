@@ -2,4 +2,7 @@ module github.com/adyzng/toolkit
 
 go 1.16
 
-require golang.org/x/tools v0.1.7
+require (
+	github.com/spf13/cast v1.4.1
+	golang.org/x/tools v0.1.7
+)

@@ -1,4 +1,4 @@
-package map2struct
+package model
 
 type BookType int64
 

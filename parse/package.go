@@ -134,11 +134,14 @@ func (pp *DelayPkgParser) ParseFile(filePath string) (*PackageV2, error) {
 }
 
 func (p *PackageV2) GetImportPkg(pkgName string) (*PackageV2, error) {
-	pkgPath := p.Imports[pkgName]
-	if pkgPath == "" {
+	if pkgName == p.Name {
+		return p, nil
+	}
+	if pkgPath := p.Imports[pkgName]; pkgPath != "" {
+		return p.parser.ParsePackage(pkgPath)
+	} else {
 		return nil, fmt.Errorf("unknown import package. pkgPath=%s import=%s", pkgPath, pkgName)
 	}
-	return p.parser.ParsePackage(pkgPath)
 }
 
 func (p *PackageV2) FindFuncList(prefix string) (map[string]*FunctionV2, error) {
@@ -281,6 +284,11 @@ func (p *PackageV2) parseFuncDecl(idt *ast.FuncDecl, prefix string) (*FunctionV2
 
 	fi.OutputType = p.parseStructField(returns.List[0])
 	depPkg, err := p.GetImportPkg(fi.OutputType.Package)
+	if err != nil {
+		log.Printf("load package failed. pkg=%s err=%v", fi.OutputType.Package, err)
+		return nil, err
+	}
+
 	if depPkg != nil {
 		fi.OutputParam, err = depPkg.FindStruct(fi.OutputType.TypeName)
 		if err != nil {
