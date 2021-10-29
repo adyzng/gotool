@@ -1,5 +1,4 @@
-
-## 使用方法
+# map2struct 使用方法
 
 自动生成 map 到结构的转换代码，支持的 map value 类型有：基本类型 + interface{}
 
